@@ -23,21 +23,20 @@
             <div class="w3-bar w3-black w3-card w3-left-align w3-large">
               <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
                 href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-              <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-              <a href="/Wyatt_Griffin_Resume.pdf" target='_blank'
-                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resume</a>
-              <a target='_blank' href="http://www.linkedin.com/in/wyatt-griffin-288a35176"
-                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">LinkedIn</a>
-              <a href="/webform.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-white">Contact
-                me</a>
+              <a href="link here" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+              <a href="link here" target='_blank'
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">link 2</a>
+              <a target='_blank' href="link here"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+              <a href="link here" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-white">Link 4</a>
             </div>
 	 <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="/webform.php" class="w3-bar-item w3-button w3-padding-large">Contact me</a>
-	  <a href="/index.html"  target='_blank' class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="/Wyatt_Griffin_Resume.pdf"  target='_blank' class="w3-bar-item w3-button w3-padding-large">Resume</a>
-    <a href="http://www.linkedin.com/in/wyatt-griffin-288a35176"  target='_blank' class="w3-bar-item w3-button w3-padding-large">LinkedIn</a>
-    <a href="/webform.php" class="w3-bar-item w3-button w3-padding-large">Contact me</a>
+	  <a href="/index.html"  target='_blank' class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="link here"  target='_blank' class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="your linke here" target='_blank' class="w3-bar-item w3-button w3-padding-large">link 3</a>
+	  <a href="/webform.php" class="w3-bar-item w3-button w3-padding-large">link 4</a>
   </div>
 </div>
 	<?php
@@ -46,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function post_captcha($user_response) {
         $fields_string = '';
         $fields = array(
-            'secret' => '6LcCcyYaAAAAADyLS4grqsTX0ZDIg6yM0zjEeBQZ',
+            'secret' => 'your secret captcha key here',
             'response' => $user_response
         );
         foreach($fields as $key=>$value)
@@ -83,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$MessageSubject = $_POST['subject'];
 			$message = $_POST['message'];
 
-			$to = "griffinwyatt9@gmail.com";
+			$to = "your email";
 			$body = "";
 
 			$body .= "From: ".$userName. "\r\n";
@@ -134,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="4"></textarea>
             </div>
             <div> <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LcCcyYaAAAAAFk56MQfA5SFIF7e6JM1xP3g6132"></div>
+      <div class="g-recaptcha" data-sitekey="your captcha public key"></div>
       <br/>
       <input type="submit" value="Submit">
     </form>
