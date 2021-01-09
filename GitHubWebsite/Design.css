@@ -1,0 +1,9 @@
+h1 {
+    font-size: 6.5em; /* 40px/16=2.5em */
+  }
+  #image {
+    height: 100px; 
+    width: 100px; 
+    max-width: 300px; 
+    max-height: 300px;
+  }
